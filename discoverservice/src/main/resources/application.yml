@@ -11,8 +11,6 @@ spring:
       ddl-auto: none
 server:
   port: 8761
-  undertow:
-    worker-threads: 150
 
 ---
 spring:
