@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    maxActive: 150
+  jpa:
+    database: MYSQL
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8080
+
+---
+spring:
+  profiles: dev
+  boot:
+    admin:
+      url: http://127.0.0.1:8010 #server端地址
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://192.168.191.1:8761/eureka/
