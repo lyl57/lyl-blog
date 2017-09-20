@@ -11,7 +11,8 @@ spring:
       ddl-auto: none
 server:
   port: 8081
-
+logging:
+  file: ./log/blog-web.log
 ---
 spring:
   profiles: dev
