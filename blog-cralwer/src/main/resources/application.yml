@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    maxActive: 150
+  jpa:
+    database: MYSQL
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8761
+
+---
+spring:
+  profiles: dev
+  boot:
+    admin:
+      url: http://127.0.0.1:8010 #server端地址
+  eureka:
+    instance:
+      hostname: 127.0.0.1
+    client:
+  #      registerWithEureka: false  #是否将eureka自身作为应用注册到eureka注册中心
+  #      fetchRegistry: false       #为true时，可以启动，但报异常：Cannot execute request on any known server
+        serviceUrl:
+          defaultZone: http://127.0.0.1:8761/eureka/
