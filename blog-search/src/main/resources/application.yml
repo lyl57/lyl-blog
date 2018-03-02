@@ -25,3 +25,7 @@ spring:
     client:
       serviceUrl:
         defaultZone: http://192.168.191.1:8761/eureka/
+  data:
+    elasticsearch:
+      cluster-name: my-application #默认为elasticsearch
+      cluster-nodes: 192.168.80.131:9300 #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
